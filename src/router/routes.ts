@@ -2,7 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: '/main',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
   },
@@ -14,6 +14,11 @@ const routes: RouteRecordRaw[] = [
       { path: '/test', component: () => import('pages/GisTest.vue') },
       { path: '/test2', component: () => import('pages/GisTest2.vue') },
     ],
+  },
+  {
+    path: '/',
+    component: () => import('layouts/EventoLayout.vue'),
+    children: [{ path: '/', component: () => import('pages/EventoTest.vue') }],
   },
 
   // Always leave this as last one,
