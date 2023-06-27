@@ -18,7 +18,11 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/EventoLayout.vue'),
-    children: [{ path: '/', component: () => import('pages/EventoTest.vue') }],
+    children: [
+      { path: '/', component: () => import('src/pages/EventoInicio.vue') },
+      { path: '/crono', component: () => import('src/pages/EventoCrono.vue') },
+      { path: '/inst', component: () => import('src/pages/EventoInst.vue') },
+    ],
   },
 
   // Always leave this as last one,
